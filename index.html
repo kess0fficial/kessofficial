@@ -1,0 +1,516 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabale University Engineering Students Society</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+            background: linear-gradient(160deg, var(--gradient-1) 0%, var(--gradient-2) 100%);
+        }
+
+        /* Enhanced Header */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            gap: 2rem;
+            align-items: center;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        .search-input {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--neutral);
+            border-radius: 30px;
+            width: 300px;
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(42, 92, 130, 0.1) 0%, rgba(233, 236, 239, 0.2) 100%);
+            border-radius: 20px;
+            margin: 2rem auto;
+            padding: 4rem 2rem;
+        }
+        /* Comment Section */
+        .comments-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .comment-form {
+            margin-bottom: 2rem;
+        }
+
+        .comment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .comment-card {
+            background: var(--neutral);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        /* Additional Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .btn-secondary {
+            background: var(--neutral);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .history-timeline {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            margin-left: 150px;
+            border-left: 3px solid var(--accent);
+            position: relative;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: -140px;
+            top: 1rem;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        .kess-photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 auto 0rem;
+            justify-content: left;
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+        }
+
+        /* Values Section */
+        .value-card {
+            padding: 1rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Partners Section */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            align-items: center;
+        }
+
+        .partner-logo {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Updated Header Structure -->
+<header class="header">
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="header-top">
+            <a href="index.html" class="logo"><img src="assets/Kesscircletransparent.png" 
+                    alt="KESS Logo" class="logo-img">KESS</a>
+              <button class="hamburger">
+                  ☰
+            </button>
+        </div>
+
+        <!-- Combined Navigation -->
+        <div class="header-bottom">
+            <!-- Main Navigation -->
+            <!--ul class="nav-links"></ul>
+
+            <!-- Tabbed Navigation -->
+            <div class="header-tabs">
+                <a href="index.html" class="tab">Home</a>
+                <a href="Events.html" class="tab">Events</a>
+                <a href="projects.html" class="tab">Projects</a>
+                <a href="contact.html" class="tab">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <section class="hero">
+         <h1 class="hero-title">
+    Kabale University Engineering Students Society (KESS)
+</h1>
+
+<p class="hero-statement">
+    The premier student-led organization empowering future engineers through:<br>
+    
+    <span class="highlight">
+    <i class="fas fa-check"></i>
+    Industry-aligned technical training<br>
+    
+    <i class="fas fa-check"></i>
+    Collaborative engineering projects<br>
+    
+    <i class="fas fa-check"></i>
+    Professional development programs<br>
+    
+    <i class="fas fa-check"></i>
+    Innovation Exhibitions 
+    </span>
+</p>
+
+<p class="hero-mission">
+    Bridging academic theory with real-world application to 
+    develop socially-responsible engineering leaders for Uganda's
+    technological transformation.
+</p>
+        <div class="value-cards">
+    <!-- Technical Excellence Card -->
+    <div class="value-card">
+        <i class="fas fa-microchip"></i>
+        <h3>Technical Capacity Building</h3>
+        <p>
+            Quarterly workshops on emerging technologies:<br>
+            • CAD/CAM Systems<br>
+            • IoT & Automation<br>
+            • Renewable Energy Systems<br>
+            
+        </p>
+        <a href="projects.html" class="card-link">
+          view all →
+        </a>
+    </div>
+
+    <!-- Industry Collaboration Card -->
+    <div class="value-card">
+        <i class="fas fa-handshake"></i>
+        <h3>Industry Partnerships</h3>
+        <p>
+            Active MoUs with:<br>
+            • Uganda Industrial Research Institute (UIRI) <br>
+            • Uganda Institution of Professional Engineers (UIPE)<br>
+            
+        </p>
+        
+    </div>
+
+    <!-- Innovation Card -->
+    <div class="value-card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovation Ecosystem</h3>
+        <p>
+            Annual programs:<br>
+            • KESS Mentorship Workshops<br>
+            • K-labs Design workshops<br>
+            • World Engineering Day Presentations<br>
+            
+            
+        </p>
+        <a href="Events.html" class="card-link">
+            View Upcoming Events →
+        </a>
+    </div>
+
+    <!-- Community Impact Card -->
+    <div class="value-card">
+        <i class="fas fa-users-gear"></i>
+        <h3>Community Solutions</h3>
+        <p>
+            Recent projects:<br>
+            • IoT over voltage protection system<br>
+            • Car Alcohol Detection System<br>
+            • Liquid Dispenser & vending system<br>
+            
+        </p>
+        <a href="blog.html" class="card-link">
+            Explore Recent Activities →
+        </a>
+    </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <h2 class="hero-title">About us</h2>
+        <p>Discover our mission, values, and the team driving innovation</p>
+        <!--div class="card">
+        <section class="history-timeline">
+        <h2>Our Journey</h2>
+        <div class="timeline-item">
+            <div class="timeline-year">2021</div>
+            <h6>Founded by Engineering Students</h6>
+            <h9>Established with 50 founding members to promote practical engineering education</h9>
+        </div>
+        <!-- Add more timeline items ->
+        </section>
+    </div-->
+      <div class="card">
+        <div class="value-card">
+            <div class="value-icon">🎯</div>
+            <h3>Our Vision</h3>
+            <p>Provide knowledge, skills & experiences for professional participation in Engineering.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="value-card">
+            <div class="value-icon">⚙️</div>
+            <h3>Our Mission</h3>
+            <p>Promote & preserve the interests of our Engineering students.</p>
+        </div>
+    </div>
+        <div class="card">
+        <div class="value-card">
+            <div class="value-icon">❤️</div>
+            <h3>Core Values</h3>
+            <!--ul class="values-list"-->
+                <p>Integrity</p>
+                <p>Creativity & innovation</p>
+                <p>Teamwork</p>
+                <p>professionalism</p>
+                <p>Excellence</p>
+            <!--/ul-->
+        </div>
+ </div>
+</section>
+
+    
+<section class="hero">
+        <h2 class="hero-title">Leadership Team</h2>
+    <section class="team">
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="assets/Assoc-Prof.-Lawrence-Muhwezi-1.jpg" alt="Dr. Lawrence Muhwezi(PhD)" class="team-photo">
+                <h3>Dr. Lawrence Muhwezi(PhD)</h3>
+                <p>Faculty Dean FETADFA</p>
+                
+            <div class="social-links">
+                    <p><a href="https://www.linkedin.com/company/kabale-university-engineering-students-society-kess">
+        <i class="fab fa-linkedin"></i>
+        LinkedIn</a>
+                    </p>
+      <p><a href="mailto:kess.kab22@gmail.com">
+        <i class="fas fa-envelope"></i>
+        Email
+    </a>
+    </p> 
+                <a href="https://twitter.com/kess0fficial">
+                    <i class="fab fa-twitter"></i>
+                    Twitter
+    </a>
+                </div>
+            </div>
+            <!-- Add more team members -->
+            <div class="team-card">
+                <img src="assets/George-Musingye.jpg" alt="Mr. George Musingye" class="team-photo">
+                <h3>Mr. George Musingye</h3>
+                <p>Administator</p>
+                <p></p>
+                <div class="social-links">
+                    <p><a href="https://www.linkedin.com/company/kabale-university-engineering-students-society-kess">
+        <i class="fab fa-linkedin"></i>
+        LinkedIn
+                    </a>  <p> <a href="mailto:kess.kab22@gmail.com">
+        <i class="fas fa-envelope"></i>
+        Email
+                    </a></p>
+                    <a href="https://twitter.com/kess0fficial">
+                    <i class="fab fa-twitter"></i>
+                    Twitter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+    <section class="hero">
+        <h2 class="hero-title">Our Partners</h2>
+    <section class="partners">
+        <div class="partners-grid">
+            <img src="assets/UIPELogotransparent.png" alt="UIPE Logo" class="partner-logo">
+            <img src="assets/kablogo.png" alt="KAB Logo" class="partner-logo">
+
+            <!-- Add more partner logos -->
+        </div>
+    </section>
+</section>
+    
+    <section class="comments-section">
+        <h2>Student Discussions</h2>
+        <form class="comment-form">
+            <textarea rows="3" placeholder="Join the discussion..." required></textarea>
+            <button class="btn" type="submit">Post Comment</button>
+        </form>
+        <div class="comment-list">
+            <div class="comment-card compact">
+            <div class="comment-header">
+            <h4 class="comment-author">Mark</h4>
+            <span class="comment-date">2h ago</span>
+        </div>
+    <p class="comment-excerpt">Great initiative!</p>
+            </div>
+            <!-- More comments -->
+        </div>
+    </section>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="Events.html">
+                    <i class="fas fa-calendar-alt"></i>
+                    Events
+                </a>
+                <a href="projects.html">
+                    <i class="fas fa-folder-open"></i>
+                    Projects
+                </a>
+                <a href="contact.html">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="constitution.html">
+                    <i class="fas fa-book"></i>
+                    Constitution
+                </a>
+                <a href="membershipform.html">
+                    <i class="fas fa-user-plus"></i>
+                    Membership
+                </a>
+                <a href="gallery.html">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="blog.html">
+                    <i class="fas fa-blog"></i>
+                    Blog
+                </a>
+                <a href="internships.html">
+                    <i class="fas fa-briefcase"></i>
+                    Internships
+                </a>
+            </div>
+            <div class="footer-column">
+        <h4>Leadership</h4>
+        <a href="leadership.html#current">
+            <i class="fas fa-users-cog"></i>
+            Current Cabinet
+        </a>
+        <a href="leadership.html#past">
+            <i class="fas fa-history"></i>
+            Past Cabinets
+        </a>
+        <a href="elections.html">
+            <i class="fas fa-vote-yea"></i>
+            Election Process
+        </a>
+        <a href="constitution.html#leadership">
+            <i class="fas fa-file-contract"></i>
+            Governance Structure
+        </a>
+            </div>
+
+            
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:kess.kab22@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a href="https://twitter.com/kess0fficial">
+                    <i class="fab fa-twitter"></i>
+                    Twitter
+                </a>
+                <a href="https://www.linkedin.com/company/kabale-university-engineering-students-society-kess">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://instagram.com/kess0fficial">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 Kabale University Engineering Students Society (KESS)</p>
+        </div>
+    </div>
+</footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

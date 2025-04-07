@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | KESS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet'>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, rgba(42, 92, 130, 0.1) 0%, rgba(233, 236, 239, 0.2) 100%);
+            border-radius: 20px;
+            margin: auto auto;
+            padding: 2rem 2rem;
+        }
+        /* Enhanced Event Cards */
+        .event-card {
+            position: relative;
+            overflow: hidden;
+            border-left: 4px solid var(--accent);
+        }
+
+        .event-date {
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .event-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            color: var(--text-light);
+        }
+
+        .event-type {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.9);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Event Filters */
+        .event-filters {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            background: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* Calendar View */
+        .calendar-toggle {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .calendar-view {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 0 2rem;
+        }
+
+        /* Progress Bar */
+        .registration-progress {
+            height: 6px;
+            background: var(--neutral);
+            border-radius: 3px;
+            margin: 1rem 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 3px;
+            width: 75%;
+        }
+        </style>
+    </head>
+<body>
+    <header class="header">
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <img src="assets/Kesscircletransparent.png" 
+                    alt="KESS Logo" class="logo-img">KESS</a>
+              <button class="hamburger">
+                  ☰
+            </button>
+        </div>
+
+        <!-- Combined Navigation -->
+        <div class="header-bottom">
+            <!-- Main Navigation -->
+            <!--ul class="nav-links"></ul>
+
+            <!-- Tabbed Navigation -->
+            <div class="header-tabs">
+                <a href="index.html" class="tab">Home</a>
+                <a href="Events.html" class="tab">Events</a>
+                <a href="projects.html" class="tab">Projects</a>
+                <a href="contact.html" class="tab">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <section class="hero">
+        <h1 class="hero-title">Upcoming Events</h1>
+        <p>Join our technical workshops, competitions, and networking events</p>
+        <div class="event-filters">
+            <div class="filter-group">
+                <select class="filter-select">
+                    <option>All Categories</option>
+                    <option>Workshops</option>
+                    <option>Competitions</option>
+                    <option>Lectures</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="date" class="filter-date">
+            </div>
+        </div>
+    </section>
+
+    <div class="cards">
+        <div class="card event-card">
+            <span class="event-type">Webinar</span>
+            <div class="event-date">Tuesdays</div>
+            <h3>KESS Engineer's Manual</h3>
+            <div class="event-meta">
+                <span>🕒 8:00 PM - 9:00 PM</span>
+                <span>📍 Virtual Event</span>
+            </div>
+            <div class="registration-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <p class="event-description">Conversations with Professional Engineers to share knowledge, experiences, and life
+lessons. </p>
+            <div class="event-footer">
+                <a href="https://whatsapp.com/channel/0029Vb0dCyT5q08iOA32Ii0j">
+                 <button a href="https://whatsapp.com/channel/0029Vb0dCyT5q08iOA32Ii0j" class="btn">Google Meet</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="card event-card">
+            <span class="event-type">Workshop</span>
+            <div class="event-date">Monday</div>
+            <div class="event-date">Friday</div>
+            <h3>K-labs Workshop</h3>
+            <div class="event-meta">
+                <span>🕒 5:00 PM - 6:00 PM</span>
+                <span>📍 Engineering Block 1</span>
+            </div>
+            <div class="registration-progress">
+                <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <p class="event-description">Innovation and projects workshop session embedding multiple technologies & frameworks</p>
+            <div class="event-footer">
+                <a href="https://twitter.com/kess0fficial">
+             <button a href="https://twitter.com/kess0fficial" class="btn">RSVP Now</button>
+                </a>
+           </div>
+        </div>
+    </div>
+
+    
+    <section class="calendar-view" style="display: none;">
+        <div id="calendar">
+            <button class="btn btn-secondary" id="toggleView">Switch to Calendar View</button>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="Events.html">
+                    <i class="fas fa-calendar-alt"></i>
+                    Events
+                </a>
+                <a href="projects.html">
+                    <i class="fas fa-folder-open"></i>
+                    Projects
+                </a>
+                <a href="contact.html">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="constitution.html">
+                    <i class="fas fa-book"></i>
+                    Constitution
+                </a>
+                <a href="membershipform.html">
+                    <i class="fas fa-user-plus"></i>
+                    Membership
+                </a>
+                <a href="gallery.html">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="blog.html">
+                    <i class="fas fa-blog"></i>
+                    Blog
+                </a>
+                <a href="internships.html">
+                    <i class="fas fa-briefcase"></i>
+                    Internships
+                </a>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:kess.kab22@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a href="https://twitter.com/kess0fficial">
+                    <i class="fab fa-twitter"></i>
+                    Twitter
+                </a>
+                <a href="https://www.linkedin.com/company/kabale-university-engineering-students-society-kess">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://instagram.com/kess0fficial">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 Kabale University Engineering Students Society (KESS)</p>
+        </div>
+    </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

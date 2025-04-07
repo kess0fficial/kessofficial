@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | KESS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Enhanced About Styles */
+        .history-timeline {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            margin-left: 150px;
+            border-left: 3px solid var(--accent);
+            position: relative;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: -140px;
+            top: 1rem;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+        }
+
+        /* Values Section */
+        .value-card {
+            padding: 2rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Partners Section */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            align-items: center;
+        }
+
+        .partner-logo {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="header-top">
+            <a href="index.html" class="logo"><img src="assets/Kesscircletransparent.png" 
+                    alt="KESS Logo" class="logo-img">KESS</a>
+              <button class="hamburger">
+                  ☰
+            </button>
+        </div>
+
+        <!-- Combined Navigation -->
+        <div class="header-bottom">
+            <!-- Main Navigation -->
+            <!--ul class="nav-links"></ul>
+
+            <!-- Tabbed Navigation -->
+            <div class="header-tabs">
+                <a href="index.html" class="tab">Home</a>
+                <a href="Events.html" class="tab">Events</a>
+                <a href="projects.html" class="tab">Projects</a>
+                <a href="contact.html" class="tab">Contact</a>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero-title">Shaping the Future of Engineering</h1>
+        <p>Discover our mission, values, and the team driving innovation</p>
+    </section>
+
+    <section class="history-timeline">
+        <h2>Our Journey</h2>
+        <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <h3>Founded by Engineering Students</h3>
+            <p>Established with 50 founding members to promote practical engineering education</p>
+        </div>
+        <!-- Add more timeline items -->
+    </section>
+
+    <div class="cards">
+        <div class="value-card">
+            <div class="value-icon">⚙️</div>
+            <h3>Our Mission</h3>
+            <p>Bridge theory and practice through collaborative innovation</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon">❤️</div>
+            <h3>Core Values</h3>
+            <ul class="values-list">
+                <li>Innovation</li>
+                <li>Integrity</li>
+                <li>Collaboration</li>
+                <li>Sustainability</li>
+                <li>Excellence</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="team">
+        <h2 class="section-title">Leadership Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://via.placeholder.com/150" alt="Dr. Emily Chen" class="team-photo">
+                <h3>Dr. Emily Chen</h3>
+                <p>Faculty Advisor</p>
+                <p>Mechanical Engineering</p>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a> • <a href="#">Email</a>
+                </div>
+            </div>
+            <!-- Add more team members -->
+        </div>
+    </section>
+
+    <section class="partners">
+        <h2 class="section-title">Our Partners</h2>
+        <div class="partners-grid">
+            <img src="https://via.placeholder.com/150x80" alt="Partner Logo" class="partner-logo">
+            <!-- Add more partner logos -->
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="Events.html">
+                    <i class="fas fa-calendar-alt"></i>
+                    Events
+                </a>
+                <a href="projects.html">
+                    <i class="fas fa-folder-open"></i>
+                    Projects
+                </a>
+                <a href="contact.html">
+                    <i class="fas fa-envelope"></i>
+                    Contact
+                </a>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="constitution.html">
+                    <i class="fas fa-book"></i>
+                    Constitution
+                </a>
+                <a href="membershipform.html">
+                    <i class="fas fa-user-plus"></i>
+                    Membership
+                </a>
+                <a href="gallery.html">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="blog.html">
+                    <i class="fas fa-blog"></i>
+                    Blog
+                </a>
+                <a href="internships.html">
+                    <i class="fas fa-briefcase"></i>
+                    Internships
+                </a>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="mailto:kess.kab22@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a href="https://twitter.com/kess0fficial">
+                    <i class="fab fa-twitter"></i>
+                    Twitter
+                </a>
+                <a href="https://www.linkedin.com/company/kabale-university-engineering-students-society-kess">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://instagram.com/kess0fficial">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 Kabale University Engineering Students Society (KESS)</p>
+        </div>
+    </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
